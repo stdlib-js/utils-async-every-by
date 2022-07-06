@@ -34,30 +34,38 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/utils-async-every-by
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
--   If you are using Deno, visit the [`deno` branch][deno-url].
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
+To use in Observable,
+
 ```javascript
-var everyByAsync = require( '@stdlib/utils-async-every-by' );
+everyByAsync = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-async-every-by@umd/browser.js' )
+```
+
+To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
+
+```javascript
+var everyByAsync = require( 'path/to/vendor/umd/utils-async-every-by/index.js' )
+```
+
+To include the bundle in a webpage,
+
+```html
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/utils-async-every-by@umd/browser.js"></script>
+```
+
+If no recognized module system is present, access bundle contents via the global scope:
+
+```html
+<script type="text/javascript">
+(function () {
+    window.everyByAsync;
+})();
+</script>
 ```
 
 #### everyByAsync( collection, \[options,] predicate, done )
@@ -338,7 +346,12 @@ The function accepts the same `options` as `everyByAsync()`.
 
 <!-- eslint no-undef: "error" -->
 
-```javascript
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="text/javascript">
+(function () {
 var resolve = require( 'path' ).resolve;
 var readFile = require( '@stdlib/fs-read-file' );
 var everyByAsync = require( '@stdlib/utils-async-every-by' );
@@ -374,6 +387,11 @@ function predicate( file, next ) {
 }
 
 everyByAsync( files, predicate, done );
+
+})();
+</script>
+</body>
+</html>
 ```
 
 </section>
@@ -484,17 +502,17 @@ Copyright &copy; 2016-2022. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/utils/async/any-by]: https://github.com/stdlib-js/utils-async-any-by
+[@stdlib/utils/async/any-by]: https://github.com/stdlib-js/utils-async-any-by/tree/umd
 
-[@stdlib/utils/every-by]: https://github.com/stdlib-js/utils-every-by
+[@stdlib/utils/every-by]: https://github.com/stdlib-js/utils-every-by/tree/umd
 
-[@stdlib/utils/async/every-by-right]: https://github.com/stdlib-js/utils-async-every-by-right
+[@stdlib/utils/async/every-by-right]: https://github.com/stdlib-js/utils-async-every-by-right/tree/umd
 
-[@stdlib/utils/async/for-each]: https://github.com/stdlib-js/utils-async-for-each
+[@stdlib/utils/async/for-each]: https://github.com/stdlib-js/utils-async-for-each/tree/umd
 
-[@stdlib/utils/async/none-by]: https://github.com/stdlib-js/utils-async-none-by
+[@stdlib/utils/async/none-by]: https://github.com/stdlib-js/utils-async-none-by/tree/umd
 
-[@stdlib/utils/async/some-by]: https://github.com/stdlib-js/utils-async-some-by
+[@stdlib/utils/async/some-by]: https://github.com/stdlib-js/utils-async-some-by/tree/umd
 
 <!-- </related-links> -->
 
