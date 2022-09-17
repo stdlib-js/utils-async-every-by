@@ -22,7 +22,7 @@
 
 var tape = require( 'tape' );
 var noop = require( '@stdlib/utils-noop' );
-var everyByAsync = require( './../lib/every_by.js' );
+var everyByAsync = require( './../lib' );
 
 
 // TESTS //
