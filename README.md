@@ -52,13 +52,13 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import everyByAsync from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-async-every-by@deno/mod.js';
+import everyByAsync from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-async-every-by@v0.1.0-deno/mod.js';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { factory } from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-async-every-by@deno/mod.js';
+import { factory } from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-async-every-by@v0.1.0-deno/mod.js';
 ```
 
 #### everyByAsync( collection, \[options,] predicate, done )
@@ -349,7 +349,7 @@ The function accepts the same `options` as `everyByAsync()`.
 ```javascript
 var resolve = require( 'path' ).resolve;
 import readFile from 'https://cdn.jsdelivr.net/gh/stdlib-js/fs-read-file@deno/mod.js';
-import everyByAsync from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-async-every-by@deno/mod.js';
+import everyByAsync from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-async-every-by@v0.1.0-deno/mod.js';
 
 var files = [
     resolve( __dirname, 'package.json' ),
